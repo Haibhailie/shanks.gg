@@ -60,7 +60,17 @@
       style="background-color: var(--bs-dark)"
     >
       <div class="container">
-        <a class="navbar-brand" href="#page-top">Shashank Thanalapati</a>
+        <style>
+          .brand-name {
+            color: #c2560f;
+          }
+        </style>
+
+        <!-- Your HTML code -->
+        <a class="navbar-brand" href="#page-top"
+          ><span class="brand-name">Shashank</span> Thanalapati</a
+        >
+
         <button
           class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
           type="button"
@@ -81,15 +91,16 @@
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#stack"
-                >Stack</a
-              >
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"
                 >Portfolio</a
               >
             </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#stack"
+                >Stack</a
+              >
+            </li>
+
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact"
                 >Contact</a
@@ -116,7 +127,9 @@
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
           <div class="divider-custom-line"></div>
         </div>
 
@@ -195,6 +208,7 @@
     </script>
 
     <!-- About Section-->
+    <!-- About Section-->
     <section
       class="page-section"
       id="about"
@@ -208,7 +222,9 @@
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
           <div class="divider-custom-line"></div>
         </div>
         <!-- About Section Content-->
@@ -216,10 +232,10 @@
           <div class="col-lg-4 ms-auto text-white">
             <p class="lead">
               Hello World! I'm Shashank, but people call me Shanks. I'm a
-              Software Engineer at Collins Aerospace, working on military based
+              Software Engineer at Collins Aerospace, working on military-based
               communication systems. I graduated from SFU, Vancouver from the
               School of Computing Science in October 2022. My academic
-              concentrations are AI/ML, UI/UX, Project Management and
+              concentrations are AI/ML, UI/UX, Project Management, and
               Mathematics. I enjoy coding, gaming and have 2 bunnies (Mocha and
               Cookie).
             </p>
@@ -229,12 +245,166 @@
               Welcome to my project showcase/portfolio. The projects below are
               both academic and personal projects. I have worked super hard on
               each and every one of them, from my first semester in my
-              udergraduate degree to this website that I am working on as we
-              speak. I hope you take the time to see the showcase and my github
-              to get a thorough understanding of my work, skillset and care I've
-              put into it.
+              undergraduate degree to this website that I am working on as we
+              speak. I hope you take the time to see the showcase and my GitHub
+              to get a thorough understanding of my work, skillset, and care
+              I've put into it.
             </p>
           </div>
+        </div>
+        <!-- Download Resume Button -->
+        <style>
+          .custom-btn-color {
+            background-color: #c2560f;
+            color: white; /* Text color */
+            border-color: #c2560f; /* Border color */
+          }
+
+          .custom-btn-color:hover {
+            background-color: #ffcc80; /* Lighter color on hover */
+            border-color: #ffcc80; /* Border color on hover */
+          }
+        </style>
+
+        <div class="text-center mt-4">
+          <a
+            class="btn btn-xl custom-btn-color"
+            href="https://drive.google.com/uc?export=download&id=15SLMl7QZvrVPazjhLYi2Y_Op5I660n0c"
+          >
+            <svg
+              class="svg-inline--fa fa-download me-2"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="download"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+                style="--darkreader-inline-fill: currentColor"
+                data-darkreader-inline-fill=""
+              ></path>
+            </svg>
+            Download My Resume
+          </a>
+        </div>
+
+        <div class="row mt-4 text-center">
+          <div class="h2 text-center text-white mt-4 mb-4">
+            Click on the buttons below to get to my socials
+          </div>
+          <style>
+            .icon-container {
+              display: flex;
+              justify-content: space-around;
+            }
+            .list-inline-item a {
+              text-decoration: none;
+            }
+          </style>
+          <style>
+            .dev-icon.github-icon:hover {
+              color: #171515; /* Replace with your desired hover color */
+            }
+          </style>
+          <ul class="list-inline dev-icons mt-4 mb-5 icon-container">
+            <li class="list-inline-item">
+              <a href="https://github.com/Haibhailie" target="_blank">
+                <div
+                  title="My GitHub"
+                  data-toggle="popover"
+                  data-content="#github-content"
+                >
+                  <i class="devicon-github-plain dev-icon github-icon"></i>
+                </div>
+              </a>
+            </li>
+            <div id="github-content" style="display: none">
+              Click here to visit my Github profile. Check out my source code
+              directly.
+            </div>
+
+            <style>
+              .dev-icon.linkedin-icon:hover {
+                color: #0a66c2; /* Replace with your desired hover color */
+              }
+            </style>
+            <li class="list-inline-item">
+              <a
+                href="https://www.linkedin.com/in/shashank-thanalapati/"
+                target="_blank"
+              >
+                <div
+                  title="My Linkedin"
+                  data-toggle="popover"
+                  data-content="#linkedin-content"
+                >
+                  <i class="devicon-linkedin-plain dev-icon linkedin-icon"></i>
+                </div>
+              </a>
+            </li>
+            <div id="linkedin-content" style="display: none">
+              Click here to go to my LinkedIn profile.
+            </div>
+
+            <li class="list-inline-item">
+              <a
+                href="https://discordapp.com/users/380058897085628426"
+                target="_blank"
+              >
+                <div
+                  title="Discord"
+                  data-toggle="popover"
+                  data-content="#Discord-content"
+                >
+                  <i
+                    class="fa-brands fa-discord fa-5x"
+                    style="color: #ffffff"
+                  ></i>
+                </div>
+              </a>
+            </li>
+            <div id="Discord-content" style="display: none">
+              Click here to add me as a friend on Discord.
+            </div>
+
+            <style>
+              .devtoicon {
+                filter: brightness(0) invert(1);
+                transition: filter 1.5s ease;
+              }
+
+              .devtoicon:hover {
+                filter: hue-rotate(90deg);
+              }
+            </style>
+
+            <!-- Your existing HTML code with the SVG icon -->
+            <li class="list-inline-item">
+              <a href="https://dev.to/haibhailie" target="_blank">
+                <div
+                  title="DEV.to"
+                  data-toggle="popover"
+                  data-content="#devto-content"
+                >
+                  <img
+                    src="./assets/img/devto.svg"
+                    alt="DEV.to logo"
+                    class="devtoicon"
+                    style="width: 80px; height: 80px"
+                  />
+                </div>
+              </a>
+            </li>
+
+            <div id="devto-content" style="display: none">
+              Click here to go to my dev.to profile. (I just made it)
+            </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -249,10 +419,15 @@
         <h2 class="page-section-heading text-center text-uppercase mb-0">
           Portfolio
         </h2>
+        <div class="h2 text-center text-white mt-4 mb-4">
+          Now for the fun part
+        </div>
         <!-- Icon Divider-->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
           <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
@@ -412,7 +587,9 @@
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
           <div class="divider-custom-line"></div>
         </div>
         <div class="text-center mt-4">
@@ -653,7 +830,7 @@
       <div class="container">
         <!-- Contact Section Heading-->
         <h2 class="page-section-heading text-center text-white mb-4">
-          Got something fun in mind?
+          Got something fun to work on?
         </h2>
         <h2
           class="page-section-heading text-center text-white mb-0"
@@ -664,7 +841,9 @@
         <!-- Icon Divider-->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
           <div class="divider-custom-line"></div>
         </div>
         <!-- Contact Section Form-->
@@ -780,41 +959,34 @@
     <!-- Footer-->
     <footer class="footer text-center">
       <div class="container">
-        <div class="row">
-          <!-- Footer Location-->
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">
-              2215 John Daniel Drive
-              <br />
-              Clark, MO 65243
-            </p>
-          </div>
+        <div class="row justify-content-center">
           <!-- Footer Social Icons-->
-          <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="col-lg-6 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <a class="btn btn-outline-light btn-social mx-1" href="#!"
-              ><i class="fab fa-fw fa-facebook-f"></i
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://github.com/Haibhailie"
+              ><i class="fa-brands fa-github fa-2x"></i
             ></a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#!"
-              ><i class="fab fa-fw fa-twitter"></i
-            ></a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#!"
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://www.linkedin.com/in/shashank-thanalapati/"
               ><i class="fab fa-fw fa-linkedin-in"></i
             ></a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#!"
-              ><i class="fab fa-fw fa-dribbble"></i
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://discordapp.com/users/380058897085628426"
+              ><i class="fa-brands fa-discord"></i
             ></a>
-          </div>
-          <!-- Footer About Text-->
-          <div class="col-lg-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">
-              Freelance is a free to use, MIT licensed Bootstrap theme created
-              by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>
-              .
-            </p>
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://dev.to/haibhailie"
+              ><img
+                src="./assets/img/devto.svg"
+                alt="DEV.to logo"
+                class="devtoicon"
+                style="width: 50px; height: 50px; border-radius: 50%"
+            /></a>
           </div>
         </div>
       </div>
@@ -822,7 +994,10 @@
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2023</small>
+        <small
+          >Copyright &copy; shanks.gg 2023 (Not really copyrighted, this just
+          looks cool)</small
+        >
       </div>
     </div>
     <!-- Portfolio Modals-->

@@ -210,7 +210,7 @@ abbr[title] {
 .button:hover {
   position: absolute;
   transition: 1.9s;
-  color:orange;
+  color: orange;
   opacity: 1;
 }
 
@@ -5419,6 +5419,15 @@ fieldset:disabled .btn {
 .toast-body {
   padding: var(--bs-toast-padding-x);
   word-wrap: break-word;
+}
+
+.fa-discord:hover {
+  color: #5562ea !important;
+  transition: color 0.4s ease;
+}
+.fa-discord-o:hover {
+  color: #5562ea !important;
+  transition: color 0.5s ease;
 }
 
 .modal {
