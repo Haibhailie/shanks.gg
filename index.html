@@ -46,6 +46,19 @@
         transition: color 0.4s ease; /* Adjust the duration and timing function as needed */
       }
     </style>
+    <style>
+      /* Define a class for the image with styles and transitions */
+      .hover-image {
+        width: 80px;
+        height: 80px;
+        transition: opacity 0.3s ease; /* Add a fade transition with a 0.3s duration */
+      }
+
+      /* Set initial opacity to 1 (fully visible) */
+      .hover-image:hover {
+        opacity: 0; /* On hover, set opacity to 0 (completely transparent) */
+      }
+    </style>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 
@@ -391,12 +404,33 @@
                   data-toggle="popover"
                   data-content="#devto-content"
                 >
-                  <img
-                    src="./assets/img/devto.svg"
-                    alt="DEV.to logo"
-                    class="devtoicon"
-                    style="width: 80px; height: 80px"
-                  />
+                  <style>
+                    .image-container {
+                      position: relative;
+                      width: 80px;
+                      height: 80px;
+                    }
+                    .base-image,
+                    .hover-image {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                    }
+                  </style>
+                  <div class="image-container">
+                    <img
+                      src="./assets/img/devto.svg"
+                      alt="DEV.to logo"
+                      class="base-image"
+                    />
+                    <img
+                      src="./assets/img/devto-hover.svg"
+                      alt="DEV.to logo"
+                      class="hover-image"
+                    />
+                  </div>
                 </div>
               </a>
             </li>
@@ -450,7 +484,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/cabin.png"
+                src="assets/img/blueradar/main.png"
                 alt="..."
               />
             </div>
@@ -473,7 +507,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/cake.png"
+                src="assets/img/emonet/main.png"
                 alt="..."
               />
             </div>
@@ -496,7 +530,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/circus.png"
+                src="assets/img/gitlabanalyzer/menu.png"
                 alt="..."
               />
             </div>
@@ -517,11 +551,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img
-                class="img-fluid"
-                src="assets/img/portfolio/game.png"
-                alt="..."
-              />
+              <img class="img-fluid" src="assets/img/hha/main.png" alt="..." />
             </div>
           </div>
           <!-- Portfolio Item 5-->
@@ -542,13 +572,13 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/safe.png"
+                src="assets/img/myScheduleDiff/menu.png"
                 alt="..."
               />
             </div>
           </div>
           <!-- Portfolio Item 6-->
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <div
               class="portfolio-item mx-auto"
               data-bs-toggle="modal"
@@ -569,7 +599,7 @@
                 alt="..."
               />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -1019,7 +1049,26 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body text-center pb-5">
+          <style>
+            .scrollable-modal {
+              max-height: calc(100vh - 210px);
+              overflow-y: auto;
+            }
+
+            a:focus,
+            a:active {
+              outline: none;
+              border: none;
+              box-shadow: none;
+            }
+            .no-underline {
+              text-decoration: none;
+              outline: none;
+              border: none;
+              box-shadow: none;
+            }
+          </style>
+          <div class="modal-body text-center pb-5 scrollable-modal">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -1027,7 +1076,7 @@
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                   >
-                    Log Cabin
+                    BlueRadar
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -1040,17 +1089,53 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/cabin.png"
+                    src="assets/img/blueradar/main.png"
                     alt="..."
                   />
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="https://github.com/Haibhailie/BlueRadar"
+                      target="_blank"
+                      class="no-underline"
+                    >
+                      <button
+                        class="btn btn-primary mb-5 d-flex align-items-center"
+                      >
+                        <i class="fa-brands fa-github fa-2x mr-2"></i>
+                        Access the GitHub Repo
+                      </button>
+                    </a>
+                  </div>
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia neque assumenda ipsam nihil, molestias magnam,
-                    recusandae quos quis inventore quisquam velit asperiores,
-                    vitae? Reprehenderit soluta, eos quod consequuntur itaque.
-                    Nam.
+                    The revolutionary upgrades in IoT and the immense love
+                    towards losing cables in our recent technological trends has
+                    led to a massive outburst in the number of wireless devices
+                    we use. Sometimes, we know that it gets a little
+                    overwhelming for everyone. Don't worry though, we've got
+                    you. BlueRadar is a unified system that can manage, track
+                    and locate all the devices that you've paired with your
+                    Android smartphone.
                   </p>
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="assets/img/blueradar/menus.png"
+                    alt="..."
+                  />
+                  <p class="mb-4">
+                    I plan on finishing up the bug fixes and cleaning up the
+                    application and create a .NET or REST API framework to
+                    receive APIs of the devices after user authentication is
+                    complete. This will give me a chance to have a web client
+                    which can readily be accessed even when the user's main
+                    device is not on hand. This is where we plan on publishing
+                    BlueRadar to the Google PlayStore.
+                  </p>
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="assets/img/blueradar/map.png"
+                    alt="..."
+                  />
                   <button class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fas fa-xmark fa-fw"></i>
                     Close Window
@@ -1088,7 +1173,7 @@
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                   >
-                    Tasty Cake
+                    Emonet - Sentiment Analysis but Good
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -1099,19 +1184,63 @@
                     <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image-->
+                  <style>
+                    .img-fluid-emo {
+                      border: 2px solid #1bb3d0;
+                    }
+                  </style>
                   <img
-                    class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/cake.png"
+                    class="img-fluid img-fluid-emo rounded mb-5"
+                    src="assets/img/emonet/main.png"
                     alt="..."
                   />
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="https://github.com/Haibhailie/SentimentAnalysisEmonet#sentimentanalysisemonet"
+                      target="_blank"
+                      class="no-underline"
+                    >
+                      <button
+                        class="btn btn-primary mb-5 d-flex align-items-center"
+                      >
+                        <i class="fa-brands fa-github fa-2x mr-2"></i>
+                        Access the GitHub Repo
+                      </button>
+                    </a>
+                  </div>
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia neque assumenda ipsam nihil, molestias magnam,
-                    recusandae quos quis inventore quisquam velit asperiores,
-                    vitae? Reprehenderit soluta, eos quod consequuntur itaque.
-                    Nam.
+                    Emonet leverages Gated Recurrent Neural Networks (GRNN) to
+                    delve into the complex realm of emotions and feelings.
+                    Artificial Intelligence (AI) often struggles with the
+                    intricacies of understanding emotions, posing a significant
+                    challenge. Emonet aims to overcome this barrier by
+                    effectively training AI to comprehend and recognize
+                    emotions, introducing a new dimension to the capabilities of
+                    machine learning.
                   </p>
+                  <img
+                    class="img-fluid img-fluid-emo rounded mb-5"
+                    src="assets/img/emonet/graph.png"
+                    alt="..."
+                  />
+                  <p class="mb-4">
+                    Emonet builds a diverse dataset using hashtags, providing a
+                    unique alternative to manual annotation. The GRNN model,
+                    based on psychological studies, enhances the understanding
+                    of emotions in AI. The project primarily works with the LSTM
+                    model and compares it with online classifiers to test
+                    performance. Emonet achieves an impressive 83% average score
+                    in determining emotions, outperforming sentiment analysis
+                    models that typically achieve 65-70%. The project's modeling
+                    architecture uses a dataset of 20,000 tweets, employing GRNN
+                    variations for enhanced performance.
+                  </p>
+                  <img
+                    class="img-fluid img-fluid-emo rounded mb-5"
+                    src="assets/img/emonet/graph.png"
+                    alt="..."
+                  />
                   <button class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fas fa-xmark fa-fw"></i>
                     Close Window
@@ -1149,7 +1278,7 @@
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                   >
-                    Circus Tent
+                    Gitlab Analyzer
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -1160,19 +1289,68 @@
                     <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image-->
+                  <style>
+                    .img-fluid-ga {
+                      border: 2px solid #2f42bf;
+                    }
+                  </style>
                   <img
-                    class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/circus.png"
+                    class="img-fluid rounded img-fluid-ga mb-5"
+                    src="assets/img/gitlabanalyzer/menu.png"
                     alt="..."
                   />
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="https://github.com/Haibhailie/GitlabAnalyzer"
+                      target="_blank"
+                      class="no-underline"
+                    >
+                      <button
+                        class="btn btn-primary mb-5 d-flex align-items-center"
+                      >
+                        <i class="fa-brands fa-github fa-2x mr-2"></i>
+                        Access the GitHub Repo
+                      </button>
+                    </a>
+                  </div>
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia neque assumenda ipsam nihil, molestias magnam,
-                    recusandae quos quis inventore quisquam velit asperiores,
-                    vitae? Reprehenderit soluta, eos quod consequuntur itaque.
-                    Nam.
+                    GitLab Analyzer is a comprehensive analysis tool designed to
+                    scrutinize user contributions within a GitLab project.
+                    Tailored for the needs of instructors and teaching
+                    assistants, this software proves invaluable for efficiently
+                    grading students' contributions to team projects. Its
+                    functionality extends across diverse metrics, encompassing
+                    aspects such as code contributions through commits and merge
+                    requests, GitLab issue interactions, and feedback from code
+                    review comments. By offering a detailed and multifaceted
+                    examination of user engagement, GitLab Analyzer empowers
+                    educators to assess and evaluate the depth and quality of
+                    students' involvement in their collaborative endeavors.
                   </p>
+                  <img
+                    class="img-fluid rounded img-fluid-ga mb-5"
+                    src="assets/img/gitlabanalyzer/diff.png"
+                    alt="..."
+                  />
+                  <p class="mb-4">
+                    This piece of software provides a centralized platform for
+                    instructors to gain insights into various facets of student
+                    participation, facilitating a more nuanced and informed
+                    grading process. Whether evaluating the frequency and
+                    significance of code contributions or gauging the level of
+                    engagement through issue resolution and code review
+                    feedback, GitLab Analyzer streamlines the grading workflow.
+                    By leveraging these metrics, educators can ensure a fair and
+                    comprehensive assessment of each student's involvement in
+                    the project, fostering a more objective and insightful
+                    approach to grading collaborative assignments.
+                  </p>
+                  <img
+                    class="img-fluid rounded img-fluid-ga mb-5"
+                    src="assets/img/gitlabanalyzer/graph.png"
+                    alt="..."
+                  />
                   <button class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fas fa-xmark fa-fw"></i>
                     Close Window

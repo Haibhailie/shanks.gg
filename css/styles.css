@@ -11276,6 +11276,12 @@ html {
   padding: 0.8rem;
 }
 
+a:focus, a:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
