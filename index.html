@@ -268,7 +268,7 @@
         <!-- Download Resume Button -->
         <style>
           .custom-btn-color {
-            background-color: #c2560f;
+            background-color: #212529;
             color: white; /* Text color */
             border-color: #c2560f; /* Border color */
           }
@@ -281,7 +281,7 @@
 
         <div class="text-center mt-4">
           <a
-            class="btn btn-xl custom-btn-color"
+            class="btn btn-x2 custom-btn-color"
             href="https://drive.google.com/uc?export=download&id=15SLMl7QZvrVPazjhLYi2Y_Op5I660n0c"
           >
             <svg
@@ -877,115 +877,219 @@
           <div class="divider-custom-line"></div>
         </div>
         <!-- Contact Section Form-->
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-xl-7">
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- * * SB Forms Contact Form * *-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- This form is pre-integrated with SB Forms.-->
-            <!-- To make this form functional, sign up at-->
-            <!-- https://startbootstrap.com/solution/contact-forms-->
-            <!-- to get an API token!-->
-            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-              <!-- Name input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name..."
-                  data-sb-validations="required"
-                />
-                <label for="name">Full name</label>
-                <div class="invalid-feedback" data-sb-feedback="name:required">
-                  A name is required.
-                </div>
-              </div>
-              <!-- Email address input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="email"
-                  type="email"
-                  placeholder="name@example.com"
-                  data-sb-validations="required,email"
-                />
-                <label for="email">Email address</label>
-                <div class="invalid-feedback" data-sb-feedback="email:required">
-                  An email is required.
-                </div>
-                <div class="invalid-feedback" data-sb-feedback="email:email">
-                  Email is not valid.
-                </div>
-              </div>
-              <!-- Phone number input-->
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  id="phone"
-                  type="tel"
-                  placeholder="(123) 456-7890"
-                  data-sb-validations="required"
-                />
-                <label for="phone">Phone number</label>
-                <div class="invalid-feedback" data-sb-feedback="phone:required">
-                  A phone number is required.
-                </div>
-              </div>
-              <!-- Message input-->
-              <div class="form-floating mb-3">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  type="text"
-                  placeholder="Enter your message here..."
-                  style="height: 10rem"
-                  data-sb-validations="required"
-                ></textarea>
-                <label for="message">Message</label>
-                <div
-                  class="invalid-feedback"
-                  data-sb-feedback="message:required"
-                >
-                  A message is required.
-                </div>
-              </div>
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
-              <div class="d-none" id="submitSuccessMessage">
-                <div class="text-center mb-3">
-                  <div class="fw-bolder">Form submission successful!</div>
-                  To activate this form, sign up at
-                  <br />
-                  <a href="https://startbootstrap.com/solution/contact-forms"
-                    >https://startbootstrap.com/solution/contact-forms</a
-                  >
-                </div>
-              </div>
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
-                <div class="text-center text-danger mb-3">
-                  Error sending message!
-                </div>
-              </div>
-              <!-- Submit Button-->
-              <button
-                class="btn btn-primary btn-xl disabled"
-                id="submitButton"
-                type="submit"
-              >
-                Send
-              </button>
-            </form>
-          </div>
+        <div>
+          <form
+            id="fs-frm"
+            name="message-form"
+            accept-charset="utf-8"
+            action="https://formspree.io/f/xwkdjvaw"
+            method="post"
+          >
+            <fieldset id="fs-frm-inputs">
+              <label for="full-name">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="full-name"
+                placeholder="First and Last"
+                required=""
+              />
+              <label for="email-address">Email Address</label>
+              <input
+                type="email"
+                name="_replyto"
+                id="email-address"
+                placeholder="email@domain.tld"
+                required=""
+              />
+              <label for="telephone">Telephone Number (Optional)</label>
+              <input
+                type="telephone"
+                name="telephone"
+                id="telephone"
+                placeholder="(555) 555-5555"
+              />
+              <label for="message">Message</label>
+              <textarea
+                rows="6"
+                name="message"
+                id="message"
+                placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+                required=""
+              ></textarea>
+              <input
+                type="hidden"
+                name="_subject"
+                id="email-subject"
+                value="message Form Submission"
+              />
+            </fieldset>
+            <style>
+              .submit-btn-color {
+                background-color: #212529;
+                color: white; /* Text color */
+                border-color: #c2560f; /* Border color */
+                transition: transform 0.5s;
+                display: block;
+                margin: auto;
+              }
+
+              .submit-btn-color:hover {
+                background-color: #ffcc80; /* Lighter color on hover */
+                border-color: #ffcc80; /* Border color on hover */
+                cursor: pointer;
+                transform: scale(1.05);
+              }
+            </style>
+            <button type="submit" class="btn btn-xl submit-btn-color">
+              Submit
+            </button>
+          </form>
+          <style>
+            /* reset */
+            #fs-frm {
+              max-width: 600px; /* adjust as needed */
+              margin: 0 auto; /* center the form if it's less than the max-width */
+            }
+            #fs-frm input,
+            #fs-frm select,
+            #fs-frm textarea,
+            #fs-frm fieldset,
+            #fs-frm optgroup,
+            #fs-frm label,
+            #fs-frm #card-element:disabled {
+              font-family: inherit;
+              font-size: 100%;
+              color: inherit;
+              border: none;
+              border-radius: 0;
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+            #fs-frm label,
+            #fs-frm legend,
+            #fs-frm ::placeholder {
+              font-size: 0.925rem;
+              margin-bottom: 0.5rem;
+              padding-top: 0.2rem;
+              display: flex;
+              align-items: baseline;
+            }
+            #fs-frm input,
+            #fs-frm select,
+            #fs-frm textarea {
+              font-size: 1.2rem;
+            }
+            #fs-frm ::placeholder {
+              font-size: 1.2rem; /* adjust as needed */
+            }
+
+            #fs-frm ::-webkit-input-placeholder {
+              font-size: 1.2rem; /* adjust as needed */
+            }
+
+            #fs-frm ::-moz-placeholder {
+              font-size: 1.2rem; /* adjust as needed */
+            }
+
+            #fs-frm :-ms-input-placeholder {
+              font-size: 1.2rem; /* adjust as needed */
+            }
+            #fs-frm label {
+              font-size: 1.2rem; /* adjust as needed */
+              text-align: center;
+            }
+            /* border, padding, margin, width */
+            #fs-frm input,
+            #fs-frm select,
+            #fs-frm textarea {
+              border-radius: 10px; /* adjust as needed */
+            }
+            #fs-frm input,
+            #fs-frm select,
+            #fs-frm textarea,
+            #fs-frm #card-element {
+              border: 2px solid rgba(33, 37, 41);
+              background-color: rgba(255, 255, 255, 0.9);
+              padding: 0.75em 1rem;
+              margin-bottom: 1.5rem;
+            }
+            #fs-frm input:focus,
+            #fs-frm select:focus,
+            #fs-frm textarea:focus {
+              background-color: white;
+              outline-style: solid;
+              outline-width: thin;
+              outline-color: gray;
+              outline-offset: -1px;
+            }
+            #fs-frm [type="text"],
+            #fs-frm [type="email"] {
+              width: 100%;
+            }
+            #fs-frm [type="button"],
+            #fs-frm [type="submit"],
+            #fs-frm [type="reset"] {
+              width: auto;
+              cursor: pointer;
+              -webkit-appearance: button;
+              -moz-appearance: button;
+              appearance: button;
+            }
+            #fs-frm [type="button"]:focus,
+            #fs-frm [type="submit"]:focus,
+            #fs-frm [type="reset"]:focus {
+              outline: none;
+            }
+            #fs-frm [type="submit"],
+            #fs-frm [type="reset"] {
+              margin-bottom: 0;
+            }
+            #fs-frm select {
+              text-transform: none;
+            }
+
+            #fs-frm [type="checkbox"] {
+              -webkit-appearance: checkbox;
+              -moz-appearance: checkbox;
+              appearance: checkbox;
+              display: inline-block;
+              width: auto;
+              margin: 0 0.5em 0 0 !important;
+            }
+
+            #fs-frm [type="radio"] {
+              -webkit-appearance: radio;
+              -moz-appearance: radio;
+              appearance: radio;
+            }
+
+            /* address, locale */
+            #fs-frm fieldset.locale input[name="city"],
+            #fs-frm fieldset.locale select[name="state"],
+            #fs-frm fieldset.locale input[name="postal-code"] {
+              display: inline;
+            }
+            #fs-frm fieldset.locale input[name="city"] {
+              width: 52%;
+            }
+            #fs-frm fieldset.locale select[name="state"],
+            #fs-frm fieldset.locale input[name="postal-code"] {
+              width: 20%;
+            }
+            #fs-frm fieldset.locale input[name="city"],
+            #fs-frm fieldset.locale select[name="state"] {
+              margin-right: 3%;
+            }
+          </style>
         </div>
       </div>
     </section>
+
     <!-- Footer-->
     <footer class="footer text-center">
       <div class="container">
@@ -1388,7 +1492,7 @@
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                   >
-                    Controller
+                    Community Based Rehabilitation
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -1401,17 +1505,38 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/game.png"
+                    src="assets/img/hha/main.png"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia neque assumenda ipsam nihil, molestias magnam,
-                    recusandae quos quis inventore quisquam velit asperiores,
-                    vitae? Reprehenderit soluta, eos quod consequuntur itaque.
-                    Nam.
+                    The Community Based Rehabilitation project is an Android
+                    application developed for the London-based NGO, Hope Health
+                    Action, with a specific focus on assisting Ugandan refugees
+                    facing disabilities and health challenges. The primary
+                    objective of this initiative was to digitize and overhaul
+                    the entire database system, aiming to transform the process
+                    of data collection and storage for increased efficiency and
+                    ease of use by field workers.
                   </p>
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="assets/img/hha/mobile.png"
+                    alt="..."
+                  />
+                  <p class="mb-4">
+                    This comprehensive project involved the creation of a
+                    backend web server complemented by a frontend Android
+                    application. Notably, the Android app serves as a direct
+                    communication channel connecting office workers in London
+                    with field personnel, facilitating announcements, critical
+                    messages, and daily bulletin updates.
+                  </p>
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="assets/img/hha/mobile.png"
+                    alt="..."
+                  />
                   <button class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fas fa-xmark fa-fw"></i>
                     Close Window
@@ -1449,7 +1574,7 @@
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                   >
-                    Locked Safe
+                    MySchedule Difficulty Calculator
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -1460,18 +1585,44 @@
                     <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image-->
+                  <style>
+                    .img-fluid-msd {
+                      border: 2px solid #7b161c;
+                    }
+                  </style>
                   <img
-                    class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/safe.png"
+                    class="img-fluid img-fluid-msd rounded mb-5"
+                    src="assets/img/myScheduleDiff/menu.png"
                     alt="..."
                   />
+                  <div class="d-flex justify-content-center">
+                    <a
+                      href="https://github.com/Haibhailie/ScheduleDifficultyCalculator"
+                      target="_blank"
+                      class="no-underline"
+                    >
+                      <button
+                        class="btn btn-primary mb-5 d-flex align-items-center"
+                      >
+                        <i class="fa-brands fa-github fa-2x mr-2"></i>
+                        Access the GitHub Repo
+                      </button>
+                    </a>
+                  </div>
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia neque assumenda ipsam nihil, molestias magnam,
-                    recusandae quos quis inventore quisquam velit asperiores,
-                    vitae? Reprehenderit soluta, eos quod consequuntur itaque.
-                    Nam.
+                    Why spend valuable time delving into extensive research on
+                    courses and professors when there's an application designed
+                    to handle it all for you? The Workload Calculator is a
+                    comprehensive tool that streamlines the pre-enrollment
+                    research process for students by consolidating all necessary
+                    information into a single, user-friendly environment.
+                    Leveraging the Coursys API, it selectively displays relevant
+                    courses based on the chosen semester, while also extracting
+                    and refining data from RateMyProf and CourseDiggers. The
+                    application goes a step further by presenting an approximate
+                    weekly workload and an overall difficulty score for each
+                    course.
                   </p>
                   <button class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fas fa-xmark fa-fw"></i>
@@ -1567,6 +1718,13 @@
           },
         });
       });
+    </script>
+    <script>
+      window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName("form")) {
+          form.reset();
+        }
+      };
     </script>
   </body>
 </html>
