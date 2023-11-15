@@ -11281,12 +11281,12 @@ html {
   padding: 0.8rem;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
   border: none;
   box-shadow: none;
 }
-
 
 @media (min-width: 992px) {
   #mainNav {
@@ -11346,7 +11346,7 @@ a:focus, a:active {
   line-height: 2.75rem;
 }
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  font-size: 4rem;
 }
 .masthead .masthead-avatar {
   width: 15rem;

@@ -123,9 +123,27 @@
         </div>
       </div>
     </nav>
-
+    <style>
+      /* existing styles... */
+      @keyframes animateBackground {
+        from {
+          background-position: 0 0;
+        }
+        /*use negative width if you want it to flow right to left else and positive for left to right*/
+        to {
+          background-position: -10000px 0;
+        }
+      }
+      .bg-test {
+        background-image: url("assets/img/seemless_icons.png"); /* replace with your image path */
+        background-position: center; /* center the image */
+        background-size: auto 100%; /* adjust as needed */
+        background-repeat: repeat-x; /* repeat the image horizontally */
+        animation: animateBackground 160s linear infinite; /* adjust as needed */
+      }
+    </style>
     <!-- Masthead -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-test text-white text-center">
       <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
         <img
@@ -147,7 +165,7 @@
         </div>
 
         <!-- Masthead Subheading with Roles Animation-->
-        <p class="masthead-subheading font-weight-light mb-0">
+        <p class="masthead-subheading font-weight-bold mb-0">
           <span
             class="typewrite"
             data-period="2000"
